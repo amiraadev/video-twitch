@@ -3,6 +3,6 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <Button> Click me</Button>
+<p> Only authenticated users can see this </p>
   )
 }

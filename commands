@@ -21,3 +21,6 @@ after that you visit clerk.com => your application => webhooks => endpoint => ad
 
 npm i svix
 visit this link : https://clerk.com/docs/users/sync-data
+
+npx shadcn-ui@latest add input
+npm i query-string

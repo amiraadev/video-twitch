@@ -10,8 +10,14 @@ npx prisma init
 url of the database : "mysql://username:password@localhost:3307/nextjs-twitch"
 
 indtallation and set-up of ngrok : (windows)
- install chocolatey(package manager for windows): Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+install chocolatey(package manager for windows): Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 after that : 1-choco install ngrok
              2-ngrok config add-authtoken 2Zi4AOSdWmzQTM0BE...rest-of-the-token
              3-ngrok http 3000 
 to create a fixed domain : ngrok http --domain=https://live-chimp-stunning.ngrok-free.app 3000
+
+after that you visit clerk.com => your application => webhooks => endpoint => add the new fixed endpoint there and make it like this : https://live-chimp-stunning.ngrok-free.app/api/webhooks/clerk
+
+
+npm i svix
+visit this link : https://clerk.com/docs/users/sync-data

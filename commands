@@ -14,3 +14,4 @@ indtallation and set-up of ngrok : (windows)
 after that : 1-choco install ngrok
              2-ngrok config add-authtoken 2Zi4AOSdWmzQTM0BE...rest-of-the-token
              3-ngrok http 3000 
+to create a fixed domain : ngrok http --domain=https://live-chimp-stunning.ngrok-free.app 3000

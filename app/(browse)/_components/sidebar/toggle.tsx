@@ -30,7 +30,6 @@ export const Toggle = () => {
 					</Button>
 				</div>
 			)}
-			Toggle
 		</>
 	);
 };

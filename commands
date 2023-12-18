@@ -24,3 +24,4 @@ visit this link : https://clerk.com/docs/users/sync-data
 
 npx shadcn-ui@latest add input
 npm i query-string
+npm i zustand

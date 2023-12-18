@@ -7,11 +7,10 @@ npm i -D prisma
 npm i @prisma/client
 npx prisma init
 
- type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'my_database',
-      entities: [User, Profile],
-      synchronize: true,
+url of the database : "mysql://username:password@localhost:3307/nextjs-twitch"
+
+indtallation and set-up of ngrok : (windows)
+ install chocolatey(package manager for windows): Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+after that : 1-choco install ngrok
+             2-ngrok config add-authtoken 2Zi4AOSdWmzQTM0BE...rest-of-the-token
+             3-ngrok http 3000 

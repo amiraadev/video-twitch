@@ -1,3 +1,17 @@
 npx shadcn-ui@latest init
 npx shadcn-ui@latest add button
 npm install @clerk/nextjs
+npm i @clerk/themes
+npm install next-themes
+npm i -D prisma
+npm i @prisma/client
+npx prisma init
+
+ type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: 'root',
+      password: 'root',
+      database: 'my_database',
+      entities: [User, Profile],
+      synchronize: true,

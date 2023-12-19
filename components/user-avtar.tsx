@@ -4,6 +4,7 @@ import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "./ui/skeleton";
+import { LiveBadge } from "@/components/live-badge";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -33,24 +34,25 @@ export const UserAvatar = ({
 	showBadge,
 	size,
 }: UserAvatarProps) => {
-	const canshowBadge = showBadge && isLive;
+	const canShowBadge = showBadge && isLive;
 	return (
 		<div className='relative'>
-			<Avatar className={cn(
-                isLive && "ring-2 ring-rose-500 border border-background" ,
-                avatarSizes({size})
-            )}>
-                <AvatarImage  src={imageUrl} alt="image" className="object-cover" />
-                <AvatarFallback   className="object-cover" >
-                     {username[0]}
-                     {username[username.length - 1]}
-                </AvatarFallback>
-            </Avatar>
-            {canshowBadge && (
-                <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
-                    Live
-                </div>
-            )}
+			<Avatar
+				className={cn(
+					isLive && "ring-2 ring-rose-500 border border-background",
+					avatarSizes({ size })
+				)}>
+				<AvatarImage src={imageUrl} alt='image' className='object-cover' />
+				<AvatarFallback className='object-cover'>
+					{username[0]}
+					{username[username.length - 1]}
+				</AvatarFallback>
+			</Avatar>
+			{canShowBadge && (
+				<div className='absolute -bottom-3 left-1/2 transform -translate-x-1/2'>
+					<LiveBadge />
+				</div>
+			)}
 		</div>
 	);
 };

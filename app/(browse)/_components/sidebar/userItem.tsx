@@ -40,6 +40,7 @@ export const UserItem = ({ username, imageUrl, isLive }: UserItemProps) => {
                       imageUrl={imageUrl}
                       username={username}
                       isLive={isLive}
+                      showBadge
                     />
                 </div>
             </Link>

@@ -14,7 +14,9 @@ install chocolatey(package manager for windows): Set-ExecutionPolicy Bypass -Sco
 after that : 1-choco install ngrok
              2-ngrok config add-authtoken 2Zi4AOSdWmzQTM0BE...rest-of-the-token
              3-ngrok http 3000 
-to create a fixed domain : ngrok http --domain=https://live-chimp-stunning.ngrok-free.app 3000
+             
+to create a fixed domain : ngrok http --domain=live-chimp-stunning.ngrok-free.app 3000
+                           
 
 after that you visit clerk.com => your application => webhooks => endpoint => add the new fixed endpoint there and make it like this : https://live-chimp-stunning.ngrok-free.app/api/webhooks/clerk
 
